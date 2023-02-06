@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int mian(){
-
+int main(){
     cout << "Hello world" << endl;
     return 0;
 }
