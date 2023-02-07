@@ -3,7 +3,9 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**",
+                "\"${workspaceFolder}/**\",",
+                "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22\",",
+                "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12\"",
                 "/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22",
                 "/usr/local/Cellar/gcc/12.2.0/include/c++/12"
             ],
