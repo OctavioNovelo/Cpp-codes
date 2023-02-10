@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <cctype>
-
+// xd
 using namespace std;
 
 //Variables
