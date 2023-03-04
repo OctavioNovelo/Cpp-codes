@@ -7,7 +7,9 @@
                 "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22\",",
                 "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12\"",
                 "/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22",
-                "/usr/local/Cellar/gcc/12.2.0/include/c++/12"
+                "C:\\Users\\Octavio\\AppData\\Local\\Programs\\Microsoft VS Code\\tools\\bits",
+                "/usr/local/Cellar/gcc/12.2.0/include/c++/12",
+                "C:/Users/Octavio/AppData/Local/Programs/Microsoft VS Code/tools/bits"
             ],
             "defines": [],
             "macFrameworkPath": [
