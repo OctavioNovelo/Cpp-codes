@@ -3,22 +3,46 @@
         {
             "name": "Mac",
             "includePath": [
-                "\"${workspaceFolder}/**\",",
-                "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22\",",
-                "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12\"",
-                "/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22",
-                "C:\\Users\\Octavio\\AppData\\Local\\Programs\\Microsoft VS Code\\tools\\bits",
-                "/usr/local/Cellar/gcc/12.2.0/include/c++/12",
-                "C:/Users/Octavio/AppData/Local/Programs/Microsoft VS Code/tools/bits"
+                "C:\\Users\\Octavio\\AppData\\Local\\Programs\\Microsoft VS Code\\tools",
+                "C:/Users/Octavio/AppData/Local/Programs/Microsoft VS Code/tools"
             ],
             "defines": [],
             "macFrameworkPath": [
                 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "C:/MinGW/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "macos-clang-x86"
+            "intelliSenseMode": "windows-clang-x86",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "\"${workspaceFolder}/**\",",
+                    "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22\",",
+                    "\"/usr/local/Cellar/gcc/12.2.0/include/c++/12\"",
+                    "/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin22",
+                    "C:\\Users\\Octavio\\AppData\\Local\\Programs\\Microsoft VS Code\\tools\\bits",
+                    "/usr/local/Cellar/gcc/12.2.0/include/c++/12",
+                    "C:/Users/Octavio/AppData/Local/Programs/Microsoft VS Code/tools/bits",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86"
         }
     ],
     "version": 4
