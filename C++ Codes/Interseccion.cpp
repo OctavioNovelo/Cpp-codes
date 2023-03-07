@@ -1,44 +1,33 @@
 #include <iostream>
-#include <list>
 
 using namespace std;
 
-list<double> Numeros1;
-double a, b;
-list<double> Numeros2;
-double a1, b1;
-
 int main(){
 
-    cin >> a >> b;
-    cin >> a1 >> b1;
+    long long a[2];
+    long long b[2];
+    long long count;
 
-    if(a == a1){
-        cout << "1\n";
+    for(int i = 0; i < 2;i++){
+        cin >> a[i];
     }
-    else if(a == b1){
-        cout << "1\n";
+    for(int i = 0; i < 2; i++){
+        cin >> b[i];
     }
-    else if(b == a1){
-        cout << "1\n";
+
+    for(int i = 0; i < 5; i++){
+        if(a[i] == b[i]){
+            count++;
+        }
     }
-    else if(b == b1){
-        cout << "1\n";
-    }
-    else if(a1 == a){
-        cout << "1\n";
-    }
-    else if(a1 == b){
-        cout << "1\n";
-    }
-    else if(b1 == a){
-        cout << "1\n";
-    }
-    else if(b1 == b){
-        cout << "1\n";
+
+    if(count > 0){
+        cout << "1" << endl;
+        return 0;
     }
     else{
-        cout << "0\n";
+        cout << "0" << endl;
+        return 0;
     }
 }
 
