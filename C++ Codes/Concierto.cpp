@@ -1,35 +1,52 @@
+/* Link: https://omegaup.com/arena/problem/COMI-Sentados-o-parados/ */
 #include <iostream>
 
 using namespace std;
 
-long long Filas;
-long long Sillas;
-long long Boletos;
+int main() {
 
-long long Sentadas;
-long long Paradas;
+    int filas, sillas, boletos;
 
-int main(){
+    cin >> filas >> sillas;
+    cin >> boletos;
+
+    if (filas <= 0 || sillas <= 0) {
+        cout << "Entrada invalida" << endl;
+        return 0;
+    }
+
+    int asientos_disponibles = filas * sillas;
+    int personas_sentadas = min(boletos, asientos_disponibles);
+    int personas_paradas = max(0, boletos - asientos_disponibles);
+
+    cout << personas_sentadas << " " << personas_paradas << endl;
+
+    return 0;
+}
+
+/* Ejemplo corregido donde se toman en cuenta que dos personas no entran en el mismo lugar
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int Filas, Sillas, Boletos;
 
     cin >> Filas >> Sillas;
     cin >> Boletos;
 
-    Sentadas = Filas * Sillas ;
-
-    if(Boletos <= Sentadas){
-         Paradas = Boletos - Sentadas;
-         if(Paradas <= 0){
-            Paradas = 0;
-            cout << Sentadas << " " << Paradas << "\n";
-            return 0;
-         }
-         else{
-            cout << Sentadas << " " << Paradas << "\n";
-         }
-    }
-    else if(Boletos > Sentadas){
-        Paradas = Boletos - Sentadas; 
-        cout << Sentadas << " " << Paradas << "\n";
+    if (Filas <= 0 || Sillas <= 0) {
+        cout << "Entrada invalida" << endl;
         return 0;
     }
+
+    int Sentadas = Filas * Sillas;
+    int Paradas = max(0, Boletos - Sentadas);
+
+    cout << max(0, Sentadas - Paradas) << " " << Paradas << endl;
+
+    return 0;
 }
+ */
