@@ -21,9 +21,4 @@ int main(){
     string data[name][age][birthday][course];
 
     data.length(name);
-
-
-
-    
-
 }
