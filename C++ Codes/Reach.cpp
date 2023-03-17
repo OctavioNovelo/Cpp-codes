@@ -38,7 +38,7 @@ int main() {
 
     string s[n];
 
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < 1; i++) {
         getline(cin, s[i]);
 
     }

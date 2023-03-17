@@ -39,9 +39,7 @@ int main(){
     }
     if(n != 0 && k != 0){
         e = ((n * n) * k);
-        while(e >= 10){
-            e -= (e -10);
-        }
+        e = e % 10;
     } 
     cout << e;
     return 0;
