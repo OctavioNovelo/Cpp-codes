@@ -10,7 +10,7 @@ int main (){
 ios_base::sync_with_stdio(0);
 cin.tie(0);
 
-ifstream inputFile("C:\\Users\\octav\\Desktop\\Pepina"); 
+ifstream inputFile("Main.in"); 
 inputFile >> n;
 
 vector<string> palabra;
