@@ -1,3 +1,5 @@
+// Link: https://omegaup.com/arena/OMIYUC2023_FINAL_2/practice/#problems/Skip-A-Cross
+//100% 
 #include <bits/stdc++.h>
 
 using namespace std;
