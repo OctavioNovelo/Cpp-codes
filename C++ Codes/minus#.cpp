@@ -1,4 +1,3 @@
-/* Link: https://omegaup.com/course/PreEstatal_OMI_YUC/assignment/Ciclos#problems */
 #include <iostream>
 using namespace std;
 
