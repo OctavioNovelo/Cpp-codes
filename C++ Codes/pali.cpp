@@ -32,4 +32,3 @@ int main () {
         cout << "No" << '\n';
     }
 }
-
