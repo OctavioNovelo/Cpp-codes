@@ -1,4 +1,4 @@
-# C-codes-2023
+# Cpp-codes
 Here are my 2023 C++ codes that i do to prepare for the OMI 2023
 
 October 31/10/2023
