@@ -1,41 +1,52 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include <string>
-#include <vector>
 
-std::string base64_decode(const std::string &input) {
-    // Caracteres Base64 válidos
-    const std::string base64_chars =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+using namespace std;
 
-    std::vector<uint8_t> decoded_data;
-    int in_len = input.length();
-    int i = 0;
+string frase;
 
-    while (i < in_len) {
-        uint32_t sextet_a = (i < in_len) ? base64_chars.find(input[i++]) : 0;
-        uint32_t sextet_b = (i < in_len) ? base64_chars.find(input[i++]) : 0;
-        uint32_t sextet_c = (i < in_len) ? base64_chars.find(input[i++]) : 0;
-        uint32_t sextet_d = (i < in_len) ? base64_chars.find(input[i++]) : 0;
-
-        uint32_t triple = (sextet_a << 18) + (sextet_b << 12) + (sextet_c << 6) + sextet_d;
-
-        decoded_data.push_back((triple >> 16) & 0xFF);
-        if (sextet_c != 64) {
-            decoded_data.push_back((triple >> 8) & 0xFF);
-        }
-        if (sextet_d != 64) {
-            decoded_data.push_back(triple & 0xFF);
-        }
+string tableBase64(char c) {
+    // Caracteres imprimibles en Base64
+    string Base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    
+    // Calcula el índice del caracter en la tabla Base64
+    long long indice[65];
+    for(int i = 0; i < sizeof(indice); i++){
+        indice[i] = Base64[i]; 
     }
-
-    return std::string(decoded_data.begin(), decoded_data.end());
+    
+    // Convierte el índice a un número en base 64 (6 bits)
+    long long bits[1000000];
+    for (int i = 0; i < 65; i++) {
+        bits[i] = sizeof(indice[i]) * 6; 
+    }
+    
 }
 
 int main() {
-    std::string encodedText = "SGVsbG8gV29ybGQ=";
-    std::string decodedText = base64_decode(encodedText);
 
-    std::cout << "Texto decodificado: " << decodedText << std::endl;
+    cin >> frase;
+
+    // Paso 1: Dividir el string en caracteres
+    for (char c : frase) {
+        // Paso 2: Obtener el valor ASCII extendido de cada caracter en bits
+        string binary = bitset<8>(c).to_string();
+
+        // Paso 3: Dividir en stacks de 6 bits
+        for (int i = 0; i < 8; i += 6) {
+            string stack6 = binary.substr(i, 6);
+
+            // Rellenar con ceros si es necesario
+            while (stack6.length() < 6) {
+                stack6 += "0";
+            }
+
+            // Paso 4: Convertir a Base64 e imprimir
+            cout << toBase64(static_cast<char>(stoi(stack6, 0, 2)));
+        }
+    }
+
+    cout << endl;
 
     return 0;
 }
