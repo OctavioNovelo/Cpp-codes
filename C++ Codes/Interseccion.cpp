@@ -1,38 +1,44 @@
-/* Link: https://omegaup.com/arena/problem/Interseccion-de-intervalos/ */
-
 #include <iostream>
+#include <list>
 
 using namespace std;
 
+list<double> Numeros1;
+double a, b;
+list<double> Numeros2;
+double a1, b1;
+
 int main(){
 
-    long long a[2];
-    long long b[2];
-    long long count = 0;
+    cin >> a >> b;
+    cin >> a1 >> b1;
 
-    for(int i = 0; i < 2;i++){
-        cin >> a[i];
+    if(a == a1){
+        cout << "1\n";
     }
-    for(int i = 0; i < 2; i++){
-        cin >> b[i];
+    else if(a == b1){
+        cout << "1\n";
     }
-
-    for(int i = 0; i < 2; i++){
-        if(a[i] == b[i]){
-            count++;
-        }
-        else if(b[i] <= a[1] && b[i] >= a[0] || a[i] <= b[1] && a[i] >= b[0]){
-            count++;
-        }
+    else if(b == a1){
+        cout << "1\n";
     }
-
-    if(count > 0){
-        cout << "1" << endl;
-        return 0;
+    else if(b == b1){
+        cout << "1\n";
     }
-    else if(count <= 0){
-        cout << "0" << endl;
-        return 0;
+    else if(a1 == a){
+        cout << "1\n";
+    }
+    else if(a1 == b){
+        cout << "1\n";
+    }
+    else if(b1 == a){
+        cout << "1\n";
+    }
+    else if(b1 == b){
+        cout << "1\n";
+    }
+    else{
+        cout << "0\n";
     }
 }
 
